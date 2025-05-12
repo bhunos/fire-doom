@@ -1,8 +1,53 @@
 <html>
   <head>
-    <title>My Website</title>
+    <title>Fire Doom</title>
     <style>
+      @font-face {
+        font-family: "DoomRight";
+        src: url("fonts/AmazDooMRight.ttf");
+      }
+
+      @font-face {
+        font-family: "DoomLeft";
+        src: url("fonts/AmazDooMLeft.ttf");
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .doom-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 150px;
+
+        color: #fff;
+        display: flex;
+        gap: 2px;
+
+        .doom-left {
+          font-family: "DoomLeft";
+          letter-spacing: 7px;
+        }
+
+        .doom-right {
+          font-family: "DoomRight";
+          letter-spacing: 10px;
+        }
+      }
+
       table {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200vh;
+        height: 100%;
         border-collapse: collapse;
         border: 1px solid #000;
       }
@@ -36,6 +81,10 @@
   </head>
   <body>
     <div id="fire-canvas"></div>
+    <div class="doom-text">
+      <h1 class="doom-left">Do</h1>
+      <h1 class="doom-right">oM</h1>
+    </div>
     <script src="fire.js"></script>
   </body>
 </html>
